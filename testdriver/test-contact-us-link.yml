@@ -1,0 +1,7 @@
+version: 4.1.29
+steps:
+  - prompt: Locate the "Contact Us" link.
+    commands:
+      - command: scroll-until-text
+        text: Contact Us
+        direction: down
