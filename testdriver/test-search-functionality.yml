@@ -1,0 +1,23 @@
+version: 4.1.29
+steps:
+  - prompt: Focus on the search bar.
+    commands:
+      - command: hover-text
+        text: Search for deals
+        description: main search bar in the header
+        action: click
+  - prompt: Type a query such as "spa treatments."
+    commands:
+      - command: type
+        text: spa treatments
+  - prompt: Press the search button.
+    commands:
+      - command: hover-image
+        description: search icon next to the search bar
+        action: click
+  - prompt: >-
+      Assert that the search results are displayed correctly.  # Use the content
+      of the file from the environment
+    commands:
+      - command: assert
+        expect: search results for "spa treatments" are displayed
