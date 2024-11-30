@@ -1,0 +1,17 @@
+version: 4.1.29
+steps:
+  - prompt: Load the webpage.
+    commands:
+      - command: hover-text
+        text: Search for deals
+        description: address bar in Google Chrome
+        action: click
+      - command: type
+        text: https://www.example.com
+      - command: press-keys
+        keys:
+          - enter
+      - command: hover-text
+        text: groupon.com
+        description: address bar in Google Chrome
+        action: click
