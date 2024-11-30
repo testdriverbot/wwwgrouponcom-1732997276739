@@ -1,0 +1,26 @@
+version: 4.1.29
+steps:
+  - prompt: Locate the "Sign In" link.
+    commands:
+      - command: hover-text
+        text: Sign In
+        description: sign in link in the top right of the header
+        action: click
+  - prompt: Click the "Sign In" link.
+    commands:
+      - command: hover-text
+        text: Sign In
+        description: sign in link in the top right of the header
+        action: click
+  - prompt: >-
+      Assert that the sign in page is displayed and functional.  # Use the
+      content of the file from the environment
+    commands:
+      - command: hover-text
+        text: Sign In
+        description: sign in link in the top right of the header
+        action: click
+      - command: wait-for-text
+        text: Email
+      - command: assert
+        expect: the sign in page is displayed with an email input field
